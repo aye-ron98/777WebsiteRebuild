@@ -79,7 +79,7 @@ app.post('/getAccessToken', async (req, res) => {
         
         // store the access token in the session
         req.session.accessToken = accessToken;
-        console.log('Access Token:', req.session.accessToken);
+        // console.log('Access Token:', req.session.accessToken);
 
         // send a 200 code and return the access token
         res.status(200).json({message: "success"});
@@ -111,9 +111,10 @@ app.get('/getCalendarEvents', async (req, res) => {
             'Authorization': `Bearer ${req.session.accessToken}`, // access token stored in session
         }
 
+        // console.log('Access Token:', req.session.accessToken, "check");
         const response = await axios.get(endpoint, { headers });
 
-        const events = response.data;
+        const events = response.data.value;
 
         res.status(200).json({ events });
 
