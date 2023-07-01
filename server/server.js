@@ -111,7 +111,6 @@ app.get('/getCalendarEvents', async (req, res) => {
             'Authorization': `Bearer ${req.session.accessToken}`, // access token stored in session
         }
 
-        // console.log('Access Token:', req.session.accessToken, "check");
         const response = await axios.get(endpoint, { headers });
 
         const events = response.data.value;
@@ -124,6 +123,40 @@ app.get('/getCalendarEvents', async (req, res) => {
     res.status(500).json({ error: 'Failed to obtain calendar events' });
 }
 });
+
+/**
+ * Api get request to get event details
+ * body select query does not work for some reason
+ */
+app.get('/getEventDetails', async (req, res) => {
+    try {
+        const eventId = req.query.eventId;
+
+        const endpoint = `https://graph.microsoft.com/v1.0/users/${process.env.USER_NAME}/calendar/events/${eventId}?$select=subject,body,start,end,location,hideAttendees`
+
+        // request headers
+        const headers = {
+            'Authorization': `Bearer ${req.session.accessToken}`,
+            'Prefer': 'outlook.timezone="Pacific Standard Time"',
+        }
+
+        const response = await axios.get(endpoint, { headers });
+
+        const event = response.data;
+
+        res.status(200).json({ event });
+
+
+    } catch (error) {
+        console.error(error);
+        console.error(error.response);
+        console.error(error.request);
+        console.error(error.message);
+        res.status(500).json({ error: 'Failed to obtain event details' });
+    }
+});
+
+
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
