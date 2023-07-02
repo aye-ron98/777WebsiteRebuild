@@ -156,6 +156,32 @@ app.get('/getEventDetails', async (req, res) => {
     }
 });
 
+/**
+ * Api get request to get channel messages
+ * messages to be displayed as announcements
+ */
+app.get('/getChannelMessages', async (req, res) => {
+    try {
+        const endpoint = `https://graph.microsoft.com/v1.0/teams/${process.env.TEAM_ID}/channels/${process.env.CHANNEL_ID}/messages`;
+        const token = req.session.accessToken;
+
+        const headers = {
+            'Authorization': `Bearer ${token}`,
+        }
+
+        const response = await axios.get(endpoint, { headers });
+
+        const messages = response.data.value;
+
+        res.status(200).json({ messages });
+    } catch (error) {
+        console.error(error);
+        console.error(error.response);
+        console.error(error.request);
+        console.error(error.message);
+        res.status(500).json({ error: 'Failed to obtain channel messages' });
+    }
+});
 
 
 app.get('/', (req, res) => {
