@@ -45,18 +45,53 @@ Go to project directory
 cd 777WebsiteRebuild
 ```
 
-Install Dependencies
+This project contains a server and client files that must be initialized. 
+
+- [For Client](#client)
+- [For Server](#server)
+
+### Client
+1. Navigate to client file
+
+```
+cd client
+```
+
+2. Install Dependencies
 
 ```
 npm install
 ```
 
-Start the server
+3. Start the client
 
 ```
 npm start
 ```
 
+### Server
+
+1. Navigate to Server file
+
+```
+cd server
+```
+
+2. Install Dependencies
+
+```
+npm install
+```
+
+3. Start the server
+
+```
+nodemon start
+```
+
 ## Known problems
 
-To be determined as project continues running
+Firestore access key expires every 30 days.
+MS Graph API will expire in one year.
+
+Depending on which key expires, website may loose functionality to either the calendar and announcements feature, or email subscription feature.
