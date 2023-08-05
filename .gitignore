@@ -1,30 +1,30 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-client/node_modules
+client2/node_modules
 server/node_modules
 /.pnp
 .pnp.js
 
 # testing
-client/coverage
+client2/coverage
 
 # production
-client/build
+client2/build
 
 # misc
-client/.DS_Store
-client/.env.local
-client/.env.development.local
-client/.env.test.local
-client/.env.production.local
+client2/.DS_Store
+client2/.env.local
+client2/.env.development.local
+client2/.env.test.local
+client2/.env.production.local
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
 #firebase
-client/src/pages/components/utils/secretes.json
+client2/src/pages/components/utils/secretes.json
 .firebaserc
 firebase.json
 .firebase

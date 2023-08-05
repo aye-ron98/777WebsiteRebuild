@@ -1,0 +1,385 @@
+/* for drop down component */
+.drop-down {
+    padding: 1%;
+}
+
+.dropdown-title {
+    background-color: "#f5f5f5";
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.carrot {
+    width: 8vw;
+    height: 8vh;
+}
+
+.carrot svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*  for hero component */
+.hero {
+    padding: 3% 2% 5% 2%;
+    background-color: "#f5f5f5";
+}
+
+/* for Notice card component
+self contained div, all elements within are centered. To be nested in notice-card-container */
+.notice-card,
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+}
+
+.notice-card,
+.footer-container {
+    flex-basis: 30%;
+}
+
+/* casts a shadow on hover - good for button elements */
+.notice-card:hover,
+.jumbo-button {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+.notice-card-image {
+    width: 50%;
+    margin-bottom: .5%;
+    text-align: center;
+}
+
+.notice-card-image img {
+    width: 100%;
+}
+
+.notice-card-content {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.notice-card h4 {
+    text-decoration: solid underline;
+    text-decoration-color: black;
+    text-underline-offset: 30%;
+}
+
+.notice-card:hover h4 {
+    text-decoration-color: red;
+}
+
+/* for notice div on home page */
+
+/* for title elements
+centers the element in a flexbox */
+.notice-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+/* arrange notice cards
+a container to evenly space elements  */
+.notice-card-container,
+.footer-main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 0.5%;
+}
+
+.footer-main-container {
+    background-color: rgba(128, 128, 128, 0.871);
+    padding: 1%;
+}
+
+.footer-container input[type="submit"] {
+    margin-top: 3%;
+    padding: 2% 15%;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 16px;
+}
+
+.footer-container input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 2% 5%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    /* border-radius: 16px; */
+    background-color: white;
+    font-size: 16px;
+    background-color: #f1f1f1;
+}
+
+/* About page */
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.contact-info,
+.visit-us {
+    flex-basis: 50%;
+    padding: 2%;
+    background-color: #f1f1f1;
+    flex-direction: column;
+}
+
+.icon-wrapper {
+    width: 30%;
+    text-align: center;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.icon-wrapper svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.direction-button {
+    text-transform: uppercase;
+    color: #f4efe6;
+    font-size: 1.22em;
+    display: inline-block;
+    position: relative;
+    width: auto;
+    margin: -4px auto 0px auto;
+    background-color: #081f2c;
+    padding: 8px 50px 8px 15px;
+    text-align: left;
+    text-decoration: none;
+    /* background-image: url(images/green-bird.png); */
+    background-size: 15px auto;
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    z-index: 120;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.direction-button:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* for jumbotron */
+.jumbotron {
+    padding: 2%;
+    margin-bottom: 2%;
+    background-color: "#f5f5f5";
+}
+
+.jumbotron-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* ensures flex box takes 100% width of parent */
+    padding-left: 5%;
+    padding-top: 5%;
+
+}
+
+.jumbotron-button {
+    display: flex;
+    width: 100%;
+    /* ensures flex box takes 100% width of parent */
+    justify-content: center;
+    padding-top: 16%;
+}
+
+.jumbo-button {
+    margin-top: 3%;
+    padding: 1% 5%;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.jumbo-button:hover,
+.jumbo-button:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.jumbo-button:hover {
+    transform: translateY(-1px);
+    color: aliceblue;
+}
+
+.jumbo-button:active {
+    background-color: rgb(131, 215, 131);
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3%;
+    width: 50%;
+}
+
+.media-icon {
+    display: inline-block;
+    width: 100%;
+}
+
+.media-icon svg {
+    width: 100%;
+    height: 50%
+}
+
+svg:hover {
+    fill: #04AA6D;
+}
+
+/* navbar css */
+#navbarText a {
+    padding: 8px;
+}
+
+#navbarText a:hover,
+.dropdown-item a:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-offset: 50%;
+}
+
+.calendar-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    position: fixed;
+    /* Stay in place */
+    display: block;
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    text-align: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.join-text{
+    text-align: center;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+
+.notice-card-container a {
+    flex-basis: 30%;
+    text-decoration: none;
+    color: black;
+}
+
+.notice-card-container a:hover {
+    text-decoration: none;
+}
+
+.announcements-container a {
+    display: flex;
+    width: 100%;
+    flex-basis: 100%;
+}
+
+.announcements-container .notice-card {
+    flex-basis: 100%;
+    margin-bottom: 2%;
+}
+
+#valid-email {
+    color: rgb(163, 58, 58);
+}
+
+#user-subscribe {
+    color: green;
+}
+
+@media (max-width: 750px) {
+    .dropdown-title:hover {
+        box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    }
+
+    .notice-card-container,
+    .footer-main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
